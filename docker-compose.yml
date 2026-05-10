@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  server:
+    image: node:22-alpine
+    working_dir: /app
+    ports:
+      - "4001:4001"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: sh -c "npm install && npm run dev:server"
+    environment:
+      PORT: 4001
+      AI_API_KEY: ${AI_API_KEY:-}
+      AI_MODEL: ${AI_MODEL:-claude-haiku-4-5-20251001}
+      JWT_SECRET: ${JWT_SECRET:-dev-secret-change-in-production}
+      NODE_ENV: development
+      LOG_LEVEL: info
+      CHOKIDAR_USEPOLLING: "true"
+    restart: unless-stopped
+
+  web:
+    image: node:22-alpine
+    working_dir: /app
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: sh -c "npm install && npm run dev:web"
+    environment:
+      VITE_API_BASE_URL: http://localhost:4001
+      CHOKIDAR_USEPOLLING: "true"
+    depends_on:
+      - server
+    restart: unless-stopped

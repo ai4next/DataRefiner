@@ -1,0 +1,54 @@
+.dashboard { min-height: 100vh; }
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+.dash-header-left { display: flex; align-items: center; gap: 32px; }
+.dash-header-left .logo { font-size: 16px; font-weight: 700; color: var(--primary); }
+.dash-nav { display: flex; gap: 20px; }
+.dash-nav a { color: var(--text-secondary); font-size: 14px; }
+.dash-nav a.active { color: var(--primary); font-weight: 600; }
+.dash-header-right { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-secondary); }
+
+.dash-main { max-width: 1000px; margin: 0 auto; padding: 24px; }
+
+.upload-zone {
+  border: 2px dashed var(--border);
+  border-radius: 12px;
+  padding: 48px;
+  text-align: center;
+  cursor: pointer;
+  transition: all .2s;
+  background: var(--card);
+}
+.upload-zone:hover, .upload-zone.dragging {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+.upload-zone-content { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.upload-icon { font-size: 36px; color: var(--primary); font-weight: 300; }
+.upload-hint { color: var(--text-secondary); font-size: 13px; }
+
+.usage-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-top: 24px;
+  box-shadow: var(--shadow);
+}
+.usage-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 14px; }
+.usage-actions { margin-top: 8px; text-align: right; font-size: 13px; }
+
+.recent-tasks {
+  margin-top: 24px;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.recent-tasks h3 { margin-bottom: 16px; font-size: 16px; }

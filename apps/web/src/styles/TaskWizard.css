@@ -1,0 +1,61 @@
+.task-wizard { min-height: 100vh; background: white; }
+
+.wizard-header { padding: 12px 24px; border-bottom: 1px solid var(--border); }
+
+.wizard-steps {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  padding: 24px;
+  background: var(--bg);
+}
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.step-item.active { background: var(--primary); color: white; }
+.step-item.done { color: var(--success); }
+.step-num {
+  width: 24px; height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--border);
+  color: var(--text);
+}
+.step-item.active .step-num { background: white; color: var(--primary); }
+.step-item.done .step-num { background: var(--success); color: white; }
+
+.wizard-body { max-width: 900px; margin: 0 auto; padding: 24px; }
+
+.wizard-status {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px 16px;
+}
+.wizard-progress-bar {
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.wizard-progress-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+.wizard-status-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-align: center;
+}

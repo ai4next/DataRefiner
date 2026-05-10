@@ -1,0 +1,20 @@
+.settings-page { min-height: 100vh; }
+.settings-main { max-width: 700px; margin: 0 auto; padding: 24px; }
+.settings-section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.settings-section h3 { margin-bottom: 16px; font-size: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.info-row { display: flex; gap: 16px; margin-bottom: 8px; font-size: 14px; }
+.info-row label { font-weight: 500; min-width: 80px; }
+
+.plan-card { }
+.plan-name { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+.plan-quota { font-size: 14px; color: var(--text-secondary); margin-bottom: 12px; }
+
+.records-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.records-table th, .records-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); text-align: left; }
+.records-table th { font-weight: 600; color: var(--text-secondary); font-size: 13px; }

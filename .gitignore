@@ -1,0 +1,10 @@
+.claude
+.env
+node_modules/
+dist/
+*.tsbuildinfo
+uploads/
+results/
+*.db
+*.db-shm
+*.db-wal

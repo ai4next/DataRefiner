@@ -1,0 +1,20 @@
+{
+  "name": "datarefiner",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run build --workspace @datarefiner/shared && npm run dev --workspace @datarefiner/server & npm run dev --workspace @datarefiner/web",
+    "dev:server": "npm run build --workspace @datarefiner/shared && npm run dev --workspace @datarefiner/server",
+    "dev:web": "npm run build --workspace @datarefiner/shared && npm run dev --workspace @datarefiner/web",
+    "build": "npm run build --workspace @datarefiner/shared && npm run build --workspace @datarefiner/server && npm run build --workspace @datarefiner/web",
+    "test": "npm run test --workspace @datarefiner/server",
+    "postinstall": "npm run build --workspace @datarefiner/shared"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.9.0"
+  }
+}

@@ -1,0 +1,92 @@
+.file-info-bar {
+  background: var(--bg);
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.health-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.health-score { text-align: center; min-width: 100px; }
+.score-number { font-size: 48px; font-weight: 700; color: var(--primary); }
+.score-unit { display: block; font-size: 14px; color: var(--text-secondary); }
+.health-info { flex: 1; }
+.health-info p { margin-bottom: 8px; font-size: 14px; }
+.health-bar { height: 12px; background: var(--border); border-radius: 6px; overflow: hidden; margin-bottom: 4px; }
+.health-fill { height: 100%; background: linear-gradient(90deg, #22c55e, #f59e0b, #ef4444); border-radius: 6px; transition: width .5s; }
+.health-meta { font-size: 12px; color: var(--text-secondary); }
+
+.diagnosis-controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.search-input { flex: 1; max-width: 300px; }
+.issue-toggle { display: flex; align-items: center; gap: 6px; font-size: 13px; cursor: pointer; }
+.issue-toggle input { width: auto; }
+
+.column-table {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.col-header, .col-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr 30px;
+  gap: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+  align-items: center;
+}
+.col-header { background: var(--bg); font-weight: 600; color: var(--text-secondary); }
+.col-row { cursor: pointer; border-bottom: 1px solid var(--border); }
+.col-row:hover { background: var(--bg); }
+.col-row:last-child { border-bottom: none; }
+.col-row.critical { border-left: 3px solid var(--danger); }
+.col-row.warning { border-left: 3px solid var(--warning); }
+.col-row.info { border-left: 3px solid var(--info); }
+.col-row.ok { border-left: 3px solid var(--success); }
+.col-expand { text-align: center; font-size: 10px; color: var(--text-secondary); }
+
+.col-detail {
+  padding: 16px 12px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.col-detail p { margin-bottom: 6px; }
+
+.issues-list { margin: 8px 0; }
+.issue-item { font-size: 12px; padding: 2px 0; }
+.issue-critical { color: var(--danger); }
+.issue-warning { color: var(--warning); }
+.issue-info { color: var(--info); }
+
+.sample-values { margin-top: 8px; }
+.sample-grid { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px; }
+.sample-item {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.expand-hint { text-align: center; color: var(--text-secondary); font-size: 12px; margin-top: 8px; }
+.empty-table { padding: 24px; text-align: center; color: var(--text-secondary); font-size: 14px; }
+
+.issue-count { font-weight: 600; }
+.issue-count.critical { color: var(--danger); }
+.issue-count.warning { color: var(--warning); }
